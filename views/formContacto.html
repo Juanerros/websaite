@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <main>
+        <h2>Contacta con nosotros</h2>
+            <form onsubmit="confirmacion();">
+            <h3>Tu informacion</h3>
+            <label>Ingresa tu nombre:</label>
+            <input type="text" placeholder="Nombre completo" required>
+            <label>Ingresa tu edad</label>
+            <input type="number" min="1" placeholder="Edad" required>
+            <label>¿Que te gustaria hacer en la empresa?</label>
+            <textarea>Resumen...</textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <script>
+        function confirmacion() {
+            event.preventDefault();
+            Swal.fire({
+                title: "Tu mensaje fue enviado",
+                text: "Te contactaremos si estamos intersados",
+                icon: "success"
+            });
+        }
+    </script>
+
+    <footer></footer>
+</body>
+</html>

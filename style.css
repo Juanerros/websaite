@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 2px solid whitesmoke;
+}
+
+header {
+    height: 80px;
+    background-color: darkorange;
+    line-height: 78px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    margin-right: 20px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+#lista {
+    display: none;
+    /* Ocultamos la lista inicialmente */
+}
+
+@media (max-width: 400px) {
+    body {
+        background-color: teal;
+    }
+
+    #nav {
+        display: none;
+        /* Escondemos el menú original */
+    }
+
+    #menu {
+        display: flex;
+        /* Mostramos el botón del menú en pantallas pequeñas */
+        height: 30px;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+
+    header div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #lista {
+        flex-direction: column;
+        background-color: darkorange;
+        margin-top: 10px;
+        padding: 10px;
+        list-style-type: none;
+        /* Removemos los bullets de la lista */
+        position: relative;
+        /* Habilitamos z-index */
+        z-index: 1;
+    }
+
+    #lista a {
+        margin: 5px 0;
+        /* Añadimos márgenes entre los enlaces */
+        text-decoration: none;
+        /* Quitamos el subrayado de los enlaces */
+        color: white;
+        /* Color del texto */
+    }
+}
