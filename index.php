@@ -26,14 +26,15 @@ if (!isset($_SESSION["id_login"]))
             <a href="">Galería</a>
             <a href="">Contacto</a>
         </nav>
+
         <img id="menu" src="views/imgs/desplegar.png" alt="menu">
-        <div id="lista">
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Galería</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </div>
+
+        <ul id="lista">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Galería</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+
     </header>
 
 
@@ -42,11 +43,8 @@ if (!isset($_SESSION["id_login"]))
         let click = false;
 
         document.getElementById("menu").addEventListener("click", () => {
-            if (click) {
-                document.getElementById("lista").style.display = "flex";
-            } else {
-                document.getElementById("lista").style.display = "none";
-            }
+            if (click) document.getElementById("lista").style.display = "flex";
+            else document.getElementById("lista").style.display = "none";
             click = !click;
         });
 
