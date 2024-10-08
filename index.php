@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 </head>
 
+<!-- Perdon dios por este proyecto desorganizado -->
+
 <?php
 session_start();
 if (!isset($_SESSION["id_login"]))
@@ -20,19 +22,18 @@ if (!isset($_SESSION["id_login"]))
 
 <body>
     <header>
-        <img src="" alt="logo">
+        <img src="galeria_naruto/img/logo/Logo_de_naruto_editado-removebg-preview.png" alt="logo" title="Home" id="logo">
+
         <nav id="nav">
-            <a href="">Inicio</a>
-            <a href="">Galería</a>
-            <a href="">Contacto</a>
+            <a href="galeria_naruto/index.html">Galería</a>
+            <a href="views/formContacto.html">Contacto</a>
         </nav>
 
         <img id="menu" src="views/imgs/desplegar.png" alt="menu">
 
         <ul id="lista">
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Galería</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="galeria_naruto/index.html">Galería</a></li>
+            <li><a href="views/formContacto.html">Contacto</a></li>
         </ul>
 
     </header>
@@ -59,7 +60,7 @@ if (!isset($_SESSION["id_login"]))
         $desc = $conex->query("DESC productos");
 
         if ($result->num_rows > 0) {
-            echo "<table border='1'>";
+            echo "<table    >";
 
             echo "<tr>";
             while ($tabla = $desc->fetch_assoc()) {
@@ -81,7 +82,7 @@ if (!isset($_SESSION["id_login"]))
             echo "No hay datos";
 
         if (isset($_SESSION["id_login"])) {
-            echo '<h3>Ingrese el producto</h3>
+            echo '
                 <form action="model/insertar.php" method="post">
                     <input type="text" name="nombre" placeholder="Ingrese nombre" required>
                     <input type="number" min="1" step="0.01" name="precio" placeholder="Ingrese precio" required>
@@ -89,8 +90,8 @@ if (!isset($_SESSION["id_login"]))
                     <input type="submit" value="Insertar" name="insertar">
                 </form>';
 
-            echo '<form action="model/deslogearse.php" method="post">
-                <input type="submit" value="Cerrar sesion">
+            echo '<form class="cerrar" action="model/deslogearse.php" method="post">
+                <input  type="submit" value="Cerrar sesion">
                 </form>';
         }
 

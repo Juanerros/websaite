@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: url(https://fontmeme.com/fuentes/fuente-ninja-naruto/#previewtool);
+    background-color: orangered;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 50px;
+    animation: naruto linear 10s;
+    margin: 300px 0;
+}
+
+.titulo:hover{ 
+    animation: grande 10s linear forwards;
+}
+
+.encabezado{
+    height: 70px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 90px;
+    width: 90px;
+}
+
+.menu {
+    line-height: 65px;
+    margin-right: 10px;
+}
+.menu a{
+    text-decoration:none;
+    color: chocolate;
+    margin-right: 8px;
+    font-size: 20px;
+
+}
+
+.menu a:hover{
+    background-color: aliceblue;
+    border-radius: 12px;
+    padding: 10px;
+    transition: 1s;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 2s ease-in-out;
+}
+
+.contenedor{
+    margin-top: 13px;
+    width: 85%;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 120px);
+    grid-template-rows: 185px;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+   
+
+.img{
+    clip-path: polygon( 50% 0%, 100% 25%, 100% 75%, 50% 100%,0% 75%, 0% 25%);
+    grid-column:span 2;
+    height: 250px;
+    
+}
+
+.img:first-of-type{
+    grid-column:2 /span 2 ;
+}
+
+.img:nth-of-type(8){
+    grid-column: 2 /span 2;
+
+
+}
+
+.img:hover{
+    cursor: pointer;
+    clip-path: none;
+    transform: scale(1.1);
+    transition: 2s ease-in-out;
+    object-fit: none;
+
+}
+
+.carousel-item{
+    padding: 20px;
+}
+
+@keyframes naruto {
+    100% {
+        transform: rotate(0deg);
+    }
+
+    0% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes grande {
+    100% {
+        scale: 10;
+        margin: 0;
+    }
+
+    0% {
+        scale: 1;
+    }
+}

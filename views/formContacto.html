@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="../style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 </head>
+
 <body>
-    <header></header>
+
+    <header class="encabezado">
+        <img src="../galeria_naruto/img/logo/Logo_de_naruto_editado-removebg-preview.png" alt="logo" title="Home"
+            id="logo">
+        <nav class="menu">
+            <a href="..">Productos</a>
+            <a href="../galeria_naruto/index.html">Galeria</a>
+        </nav>
+
+    </header>
+
     <main>
-        <h2>Contacta con nosotros</h2>
+        <div class="form">
+            <h2>Contacta con nosotros</h2>
             <form onsubmit="confirmacion();">
-            <h3>Tu informacion</h3>
-            <label>Ingresa tu nombre:</label>
-            <input type="text" placeholder="Nombre completo" required>
-            <label>Ingresa tu edad</label>
-            <input type="number" min="1" placeholder="Edad" required>
-            <label>¿Que te gustaria hacer en la empresa?</label>
-            <textarea>Resumen...</textarea>
-            <input type="submit" value="Enviar">
-        </form>
+                <h3>Tu informacion</h3>
+                <label>Ingresa tu nombre:</label>
+                <input type="text" placeholder="Nombre completo" required>
+                <label>Ingresa tu edad</label>
+                <input type="number" min="1" placeholder="Edad" required>
+                <label>¿Que te gustaria hacer en la empresa?</label>
+                <textarea>Resumen...</textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
     </main>
 
     <script>
@@ -37,4 +52,5 @@
 
     <footer></footer>
 </body>
+
 </html>

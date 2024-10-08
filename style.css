@@ -1,21 +1,33 @@
 * {
     padding: 0;
     margin: 0;
+}
+
+body {
+    background-color: orangered;
+    /* font-family: url(https://fontmeme.com/fuentes/fuente-ninja-naruto/#previewtool); */
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-    color: whitesmoke;
-    text-decoration: none;
+
+a{
+    text-decoration:none;
+    color: chocolate;
+    margin-right: 8px;
+    font-size: 20px;
+
 }
 
-a:hover {
-    border-bottom: 2px solid whitesmoke;
+a:hover{
+    background-color: aliceblue;
+    border-radius: 12px;
+    padding: 10px;
+    transition: 1s;
 }
 
 header {
-    height: 80px;
-    background-color: darkorange;
+    height: 70px;
+    background-color: black;
     line-height: 78px;
     display: flex;
     justify-content: space-between;
@@ -29,6 +41,91 @@ main {
     margin-top: 20px;
 }
 
+.form h2 {
+    font-size: 40px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cerrar {
+    margin-top: 100px;
+    width: 200px;
+}
+
+.cerrar input[type="submit"] {
+    width: 200px;
+    background-color: crimson;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #ff8c00;
+    color: white;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #b6b6b6;
+}
+
+table td {
+    color: #333;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: darkorange;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ff6600;
+}
+
 #lista,
 #menu {
     display: none;
@@ -37,6 +134,23 @@ main {
 @media (max-width: 400px) {
     body {
         background-color: teal;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    form input[type="text"], 
+    form input[type="number"] {
+        font-size: 14px;
+    }
+
+    form input[type="submit"] {
+        font-size: 16px;
     }
 
     #nav {
